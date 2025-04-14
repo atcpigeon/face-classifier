@@ -14,15 +14,20 @@ This is a lightweight face classification project that uses PyTorch and pre-trai
 ## How to Use
 
 1. Clone this repository.
-2. Install dependencies:
+2. Create and activate a new Conda environment
+
+    ```bash
+    conda create -n face-env python=3.10
+    conda activate face-env
+3. Install dependencies:
 
     ```bash
     pip install -r requirements.txt
     ```
 
-3. Prepare training data: 
+4. Prepare training data: 
     - Place labeled images under `data/raw/{person_name}/image.jpg`.
-4. Run scripts in the following order:
+5. Run scripts in the following order:
     - `01_crop_faces.py` – face detection and cropping
     - `02_extract_embeddings.py` – generate face embeddings
     - `03_train_classifier.py` – train an SVM or MLP
