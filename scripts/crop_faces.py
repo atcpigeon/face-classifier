@@ -3,7 +3,6 @@ from facenet_pytorch import MTCNN
 from PIL import Image
 from tqdm import tqdm
 
-# 初始化 MTCNN，关闭预处理
 mtcnn = MTCNN(keep_all=False)
 
 RAW_DIR = 'data/raw'
