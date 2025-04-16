@@ -35,9 +35,11 @@ for person in os.listdir(CROPPED_DIR):
 
 embeddings_tensor = torch.stack(embeddings)
 
-torch.save(embeddings_tensor, 'embeddings.pt')
+os.makedirs('data/embeddings', exist_ok=True)
 
-with open('labels.json', 'w') as f:
+torch.save(embeddings_tensor, 'data/embeddings/embeddings.pt')
+
+with open('data/embeddings/labels.json', 'w') as f:
     json.dump(labels, f)
 
 print("Embedding extraction completed.")
